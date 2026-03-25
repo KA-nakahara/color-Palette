@@ -1,4 +1,4 @@
-  import { load, save } from "./js/strage.js";
+  import { load, save } from "./strage.js";
   
   export function setupUI() {
   

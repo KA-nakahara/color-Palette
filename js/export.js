@@ -1,4 +1,4 @@
-import { load } from "./js/strage.js";
+import { load } from "./strage.js";
 
 export function paletteExport(palettes) {
   if (!palettes || palettes.length === 0) {

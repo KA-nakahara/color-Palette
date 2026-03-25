@@ -1,5 +1,5 @@
-import { setupUI } from "./js/ui.js";
-import { setupPalette } from "./js/palette.js";
+import { setupUI } from "./ui.js";
+import { setupPalette } from "./palette.js";
 
 const ui = setupUI();
 const palette = setupPalette();
