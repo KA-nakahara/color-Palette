@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
@@ -7,9 +8,15 @@
 </head>
 <body>
 	<h1>Color Picker</h1>
+	<section id="mode-area">
+		<input type="radio" id="desktop-mode" name="mode" checked>
+		<label for="desktop-mode">デスクトップモード</label>
+		<input type="radio" id="mobile-mode" name="mode">
+		<label for="mobile-mode">モバイルモード</label>
+	</section>
 	<section id="input-area">
 		<label>
-			色を選択してください:
+			色を選択:
 			<input type="color" id="color-input">
 		</label>				
 		<input type="text" id="color-code" value="#000000">
@@ -17,9 +24,7 @@
 		<button id="clear-button">クリア</button>
 	</section>
 	<section id = "contents-area">
-		<div id="palette-list">
 		<!--- ここにカラーパレットを追加 --> 
-		</div>
 	</section>
 	<section id="save-area">
 		<label>
@@ -30,7 +35,7 @@
 		<span id="save-message"></span>
 	</section>
 	<section id="import-area">
-		<span>ファイルからインポート</span>
+		<span>インポート:</span>
 		<input type="file" id="importFile" accept=".json">
 		<span id="import-message"></span>
 	</section>
@@ -38,7 +43,7 @@
 		<!--- ここに保存されたカラーパレットを表示 -->
 	</section>
 	<section id="export-area">
-		<span>選択したパレットをエクスポート</span>
+		<div>選択パレットをエクスポート:</div>
 		<button id="selectAll">全選択</button>
 		<button id="clearAll">全解除</button>		
 		<button id="export-button">エクスポート</button>

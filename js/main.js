@@ -11,6 +11,8 @@ const importFn = paletteImport();
 (function(){
 
   const el = {
+    body: document.body,
+    modeSelect: document.getElementsByName("mode"),
     colorInput: document.getElementById("color-input"),
     colorCode: document.getElementById("color-code"),
     addBtn: document.getElementById("add-button"),
@@ -25,6 +27,26 @@ const importFn = paletteImport();
     clearAll: document.getElementById("clearAll"),
     exportButton: document.getElementById("export-button")
   };
+
+  // モード切り替え
+  el.modeSelect.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.id === "desktop-mode") {
+        el.body.classList.remove("mobile");
+        el.body.classList.add("desktop");
+        el.body.dataset.mode = "desktop";
+      } else {
+        el.body.classList.remove("desktop");
+        el.body.classList.add("mobile");
+        el.body.dataset.mode = "mobile";
+      }
+      localStorage.setItem("viewMode", el.body.dataset.mode);
+    });
+  });
+
+  const savedMode = localStorage.getItem("viewMode") || "desktop";
+  el.body.classList.add(savedMode);
+  document.getElementById(`${savedMode}-mode`).checked = true;
 
   // カラーピッカーとテキスト入力の同期
   el.colorInput.addEventListener("input", () => {

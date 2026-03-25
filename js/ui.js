@@ -93,12 +93,16 @@
       newPalette.innerHTML = `
         <span class="drag-handle" style="cursor: move;">☰</span>
         <input class="export-checkbox" type="checkbox">
-        <input type="button" class="restore-button" value="復元">
-        <input type="button" class="delete-button" value="削除">
-        <span class="palette-name">${name}</span>
-        <input type="text" class="palette-name-input" name="palette-name" value="${name}" style="display: none;">
-        <span class="edit-name" style="cursor: pointer;">✏︎</span>
-        <div class="colors-container"></div>
+        <div class="palette-content">
+          <div class="tool-row">
+            <input type="button" class="restore-button" value="復元">
+            <input type="button" class="delete-button" value="削除">
+            <span class="palette-name">${name}</span>
+            <input type="text" class="palette-name-input" name="palette-name" value="${name}" style="display: none;">
+            <span class="edit-name">✏︎</span>
+          </div>
+          <div class="colors-container"></div>
+        </div>
       `;
 
       // 色表示

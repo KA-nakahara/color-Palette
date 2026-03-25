@@ -1,8 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+}
+
+body.mobile {
+  max-width: 100%;
+}
+
+/* モードエリア */
+#mode-area {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
 /* 入力エリア */
 #input-area {
   display: flex;
-  align-items: center;
-  width: 800px;  
   padding: 12px 0;
   gap: 8px;
   border-top: 1px solid #ccc;
@@ -14,17 +28,22 @@
 
 /* コンテンツエリア 編集中のパレット */
 #contents-area {
-  display: flex;
-  width: 800px;
-  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 50px;
   gap: 8px;
   border: 1px solid #ccc;
+}
+
+body.mobile #contents-area {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .wrapper {
   position: relative; /* 基準 */
   flex: 1;
   display: flex;
+  min-height: 50px;
 }
 
 .content-cell {
@@ -50,7 +69,6 @@
 
 /* インポートエリア */
 #import-area {
-  width: 800px;
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid #ccc;
@@ -66,7 +84,28 @@
 .saved-palette {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+.palette-content {
+  display: flex;
+  gap: 8px;
+}
+
+body.mobile .palette-content {
+  display: grid;
   gap: 4px;
+}
+
+.tool-row {
+  display: flex;
+  align-self: center;
+  gap: 4px;
+}
+
+.edit-name {
+  cursor: pointer;
+  align-content: center;
 }
 
 .colors-container {
@@ -82,8 +121,6 @@
 
 /* エクスポートエリア */
 #export-area {
-  display: flex;
-  width: 800px;
   padding: 12px 0;
   gap: 4px;
   border-top: 1px solid #ccc;
