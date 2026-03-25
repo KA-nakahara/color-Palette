@@ -1,0 +1,90 @@
+/* 入力エリア */
+#input-area {
+  display: flex;
+  align-items: center;
+  width: 800px;  
+  padding: 12px 0;
+  gap: 8px;
+  border-top: 1px solid #ccc;
+}
+
+#color-code {
+  width: 80px;
+}
+
+/* コンテンツエリア 編集中のパレット */
+#contents-area {
+  display: flex;
+  width: 800px;
+  height: 80px;
+  gap: 8px;
+  border: 1px solid #ccc;
+}
+
+.wrapper {
+  position: relative; /* 基準 */
+  flex: 1;
+  display: flex;
+}
+
+.content-cell {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  mix-blend-mode: difference;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#save-area {
+  margin-top: 12px;
+}
+
+/* インポートエリア */
+#import-area {
+  width: 800px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ccc;
+}
+
+/* パレットエリア */
+#palette-area{
+  display: grid;
+  gap: 12px;
+  padding: 16px 8px;  
+}
+
+.saved-palette {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.colors-container {
+  display: flex;
+  gap: 2px;
+}
+
+.saved-color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+}
+
+/* エクスポートエリア */
+#export-area {
+  display: flex;
+  width: 800px;
+  padding: 12px 0;
+  gap: 4px;
+  border-top: 1px solid #ccc;
+}

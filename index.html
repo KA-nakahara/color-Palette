@@ -1,0 +1,48 @@
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./desktop.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Color Picker</h1>
+	<section id="input-area">
+		<label>
+			色を選択してください:
+			<input type="color" id="color-input">
+		</label>				
+		<input type="text" id="color-code" value="#000000">
+		<button id="add-button">追加</button>
+		<button id="clear-button">クリア</button>
+	</section>
+	<section id = "contents-area">
+		<div id="palette-list">
+		<!--- ここにカラーパレットを追加 --> 
+		</div>
+	</section>
+	<section id="save-area">
+		<label>
+			パレット名:
+			<input type="text" id="palette-name" placeholder="パレット名">
+		</label>
+		<button id="save-button">保存</button>
+		<span id="save-message"></span>
+	</section>
+	<section id="import-area">
+		<span>ファイルからインポート</span>
+		<input type="file" id="importFile" accept=".json">
+		<span id="import-message"></span>
+	</section>
+	<section id="palette-area">
+		<!--- ここに保存されたカラーパレットを表示 -->
+	</section>
+	<section id="export-area">
+		<span>選択したパレットをエクスポート</span>
+		<button id="selectAll">全選択</button>
+		<button id="clearAll">全解除</button>		
+		<button id="export-button">エクスポート</button>
+	</section>
+	<script type="module" src="main.js"></script>
+</body>
+</html>
