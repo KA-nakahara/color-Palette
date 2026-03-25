@@ -1,8 +1,8 @@
-import { setupPalette } from "./palette.js";
-import { setupUI } from "./ui.js"; 
-import { paletteImport } from "./import.js";
-import { paletteExport } from "./export.js";
-import { loadById } from "./strage.js";
+import { setupPalette } from "./js/palette.js";
+import { setupUI } from "./js/ui.js"; 
+import { paletteImport } from "./js/import.js";
+import { paletteExport } from "./js/export.js";
+import { loadById } from "./js/strage.js";
 
 const palette = setupPalette();
 const ui = setupUI();

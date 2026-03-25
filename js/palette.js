@@ -1,4 +1,4 @@
-import { load, save } from "./strage.js";
+import { load, save } from "./js/strage.js";
 
 export function setupPalette() {
 
