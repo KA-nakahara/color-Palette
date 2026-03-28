@@ -12,6 +12,7 @@ export function setupPalette() {
       <input type="color" class="colorPicker" value="${color}" style="display: none;">
       <span class="overlay">${color}</span> 
     `;
+    div.querySelector(".content-cell").dataset.color = color;
     return div;
   };
 

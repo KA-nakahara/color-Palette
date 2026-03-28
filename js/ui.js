@@ -38,6 +38,12 @@
   function getCurrentPalette() {
     const currentPalette = document.getElementById("contents-area");
     const cells = currentPalette.querySelectorAll(".content-cell");
+    cells.forEach(cell => {
+      if (!cell.dataset.color) {
+        const bgColor = cell.querySelector(".overlay").textContent;
+        cell.dataset.color = bgColor;
+      }
+    });
     return Array.from(cells).map(cell => cell.dataset.color);
   }
 

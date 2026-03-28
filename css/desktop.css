@@ -63,6 +63,10 @@ body.mobile #contents-area {
   font-weight: bold;
 }
 
+body.mobile .overlay {
+  font-size: 16px;
+}
+
 #save-area {
   margin-top: 12px;
 }
@@ -89,12 +93,12 @@ body.mobile #contents-area {
 
 .palette-content {
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
 body.mobile .palette-content {
   display: grid;
-  gap: 4px;
 }
 
 .tool-row {
